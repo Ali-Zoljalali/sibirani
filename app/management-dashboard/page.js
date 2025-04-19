@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/select";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Card from "@/custom-components/Card";
 
 export default function ManagementDashboard() {
   return (
@@ -31,7 +32,7 @@ export default function ManagementDashboard() {
             </SelectContent>
           </Select>
         </div>
-        <div className="flex flex-col w-full bg-white rounded-lg shadow-md ring-1 ring-gray-300 p-4 gap-2">
+        <Card>
           <div className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300">
             <h3 className="col-span-6 text-xl font-bold">Hello</h3>
             <div className="col-span-6 justify-self-end">
@@ -56,7 +57,7 @@ export default function ManagementDashboard() {
               <Input />
             </div>
           </div>
-        </div>
+        </Card>
         <Button className="w-full bg-blue-500 hover:bg-blue-600 hover:cursor-pointer">
           <Plus /> Add Keyword
         </Button>
