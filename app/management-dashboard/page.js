@@ -1,16 +1,8 @@
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Card from "@/custom-components/Card";
+import LanguageSelect from "@/custom-components/LanguageSelect";
 
 export default function ManagementDashboard() {
   return (
@@ -18,19 +10,7 @@ export default function ManagementDashboard() {
       <main className="flex flex-col items-center justify-center w-[600px] p-4 gap-4">
         <div className="flex items-center justify-between w-full p-2">
           <h1 className="text-2xl font-bold">Translation Management</h1>
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Select a language" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Languages</SelectLabel>
-                <SelectItem value="far">Farsi</SelectItem>
-                <SelectItem value="eng">English</SelectItem>
-                <SelectItem value="arb">Arabic</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+          <LanguageSelect />
         </div>
         <Card>
           <div className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300">
@@ -39,12 +19,12 @@ export default function ManagementDashboard() {
               <Input />
             </div>
           </div>
-          <div className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300">
+          <di className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300">
             <h3 className="col-span-6 text-xl font-bold">Hello</h3>
             <div className="col-span-6 justify-self-end">
               <Input />
             </div>
-          </div>
+          </di>
           <div className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300">
             <h3 className="col-span-6 text-xl font-bold">Hello</h3>
             <div className="col-span-6 justify-self-end">
