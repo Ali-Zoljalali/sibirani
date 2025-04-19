@@ -1,5 +1,5 @@
 import LanguageSelect from "@/custom-components/LanguageSelect";
-import TranslatedWordsSection from "@/custom-components/TranslatedWordsSection";
+import TranslationManagementSection from "@/custom-components/TranslationManagementSection";
 
 export default function ManagementDashboard() {
   return (
@@ -9,7 +9,7 @@ export default function ManagementDashboard() {
           <h1 className="text-2xl font-bold">Translation Management</h1>
           <LanguageSelect />
         </div>
-        <TranslatedWordsSection />
+        <TranslationManagementSection />
       </main>
     </div>
   );

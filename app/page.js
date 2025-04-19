@@ -1,5 +1,6 @@
 import Card from "@/custom-components/Card";
 import LanguageSelect from "@/custom-components/LanguageSelect";
+import TranslatedWordsSection from "@/custom-components/TranslatedWordsSection";
 
 export default function Home() {
   return (
@@ -10,22 +11,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold">Word Translation</h1>
             <LanguageSelect />
           </div>
-          <div className="flex flex-col p-3 items-start border border-gray-300 rounded-lg">
-            <h3 className="text-xl font-bold">Hello</h3>
-            <h4 className="text-xl text-gray-500">سلام</h4>
-          </div>
-          <div className="flex flex-col p-3 items-start border border-gray-300 rounded-lg">
-            <h3 className="text-xl font-bold">Hello</h3>
-            <h4 className="text-xl text-gray-500">سلام</h4>
-          </div>
-          <div className="flex flex-col p-3 items-start border border-gray-300 rounded-lg">
-            <h3 className="text-xl font-bold">Hello</h3>
-            <h4 className="text-xl text-gray-500">سلام</h4>
-          </div>
-          <div className="flex flex-col p-3 items-start border border-gray-300 rounded-lg">
-            <h3 className="text-xl font-bold">Hello</h3>
-            <h4 className="text-xl text-gray-500">سلام</h4>
-          </div>
+          <TranslatedWordsSection />
         </Card>
       </main>
     </div>
