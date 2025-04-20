@@ -41,6 +41,14 @@ export default function TranslationManagementSection() {
     setAddWordModalOpen(false);
   };
 
+  const deleteWord = (word) => {
+    setTranslations((prev) => {
+      const updated = { ...prev };
+      delete updated[word];
+      return updated;
+    });
+  };
+
   return (
     <>
       <Card>
@@ -48,6 +56,7 @@ export default function TranslationManagementSection() {
           translations={translations}
           language={language}
           onTranslationChange={addOrEditWord}
+          onWordDelete={deleteWord}
         />
       </Card>
 

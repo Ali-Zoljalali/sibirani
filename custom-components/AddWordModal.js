@@ -22,20 +22,18 @@ export default function AddWordModal({
   const [newWord, setNewWord] = useState({ word: "", translation: "" });
   return (
     <Dialog open={open}>
-      <DialogTrigger asChild>
-        <Button className="bg-blue-500">Open Modal</Button>
-      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Translate Word</DialogTitle>
           <DialogDescription>
             Add a new translation entry to your{" "}
-            {language === "en"
-              ? "English"
-              : language === "fa"
-              ? "Farsi"
-              : "Arabic"}{" "}
-            list.
+            <span className="font-bold text-gray-800">
+              {language === "en"
+                ? "English"
+                : language === "fa"
+                ? "Farsi"
+                : "Arabic"}
+            </span> list
           </DialogDescription>
         </DialogHeader>
         <div className="flex gap-4">

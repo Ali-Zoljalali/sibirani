@@ -1,9 +1,12 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Trash2 } from "lucide-react";
 
 export default function WordsTranslation({
   translations,
   language,
   onTranslationChange,
+  onWordDelete
 }) {
   if (!translations || Object.keys(translations).length === 0) {
     return (
@@ -21,7 +24,7 @@ export default function WordsTranslation({
           className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300"
         >
           <h3 className="col-span-6 text-xl font-bold">{word}</h3>
-          <div className="col-span-6 justify-self-end w-full">
+          <div className="col-span-5 justify-self-end w-full">
             <Input
               value={langs[language] || ""}
               onChange={(e) =>
@@ -29,6 +32,14 @@ export default function WordsTranslation({
               }
             />
           </div>
+          <Button
+            className="col-span-1 hover:cursor-pointer"
+            variant="outline"
+            size="icon"
+            onClick={() => onWordDelete(word)}
+          >
+            <Trash2 />
+          </Button>
         </div>
       ))}
     </>
