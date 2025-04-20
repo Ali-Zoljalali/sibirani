@@ -3,6 +3,9 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Trash2 } from "lucide-react";
 
+const fadeInSlide = "animate-fade-in-slide";
+const tickleHover = "hover:animate-tickle";
+
 export default function WordsTranslation({
   translations,
   language,
@@ -22,9 +25,10 @@ export default function WordsTranslation({
       {Object.entries(translations).map(([word, langs]) => (
         <div
           key={word}
-          className="grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300"
+          className={`grid grid-cols-12 gap-4 p-3 items-start border-b border-gray-300 ${fadeInSlide}`}
         >
           <h3 className="col-span-6 text-xl font-bold">{word}</h3>
+
           <div className="col-span-5 justify-self-end w-full">
             <Input
               placeholder="..."
@@ -39,8 +43,9 @@ export default function WordsTranslation({
               }
             />
           </div>
+
           <Button
-            className="col-span-1 hover:cursor-pointer"
+            className={`col-span-1 hover:cursor-pointer ${tickleHover}`}
             variant="outline"
             size="icon"
             onClick={() => onWordDelete(word)}

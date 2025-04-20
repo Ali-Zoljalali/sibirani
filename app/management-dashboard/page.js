@@ -3,10 +3,14 @@ import LanguageSelect from "@/custom-components/LanguageSelect";
 import TranslationManagementSection from "@/custom-components/TranslationManagementSection";
 import Link from "next/link";
 
+const fadeInSlide = "animate-fade-in-slide";
+
 export default function ManagementDashboard() {
   return (
     <div className="flex items-center justify-center min-h-screen px-4 sm:px-8 py-10">
-      <main className="flex flex-col items-center justify-center w-full max-w-xl gap-6">
+      <main
+        className={`flex flex-col items-center justify-center w-full max-w-xl gap-6 ${fadeInSlide}`}
+      >
         <div className="flex items-center sm:justify-between w-full gap-4">
           <h1 className="text-2xl font-bold text-center sm:text-left">
             Translation Management
@@ -16,7 +20,7 @@ export default function ManagementDashboard() {
         <TranslationManagementSection />
       </main>
       <Link href="../">
-        <Button className="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">
+        <Button className="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-700 hover:scale-105 transition-transform duration-300 font-bold py-2 px-4 rounded">
           {"<-"} Back
         </Button>
       </Link>
