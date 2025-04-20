@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 import { Trash2 } from "lucide-react";
 
 export default function WordsTranslation({
   translations,
   language,
   onTranslationChange,
-  onWordDelete
+  onWordDelete,
 }) {
   if (!translations || Object.keys(translations).length === 0) {
     return (
@@ -26,6 +27,12 @@ export default function WordsTranslation({
           <h3 className="col-span-6 text-xl font-bold">{word}</h3>
           <div className="col-span-5 justify-self-end w-full">
             <Input
+              placeholder="..."
+              className={cn(
+                "text-center",
+                !langs[language] && "bg-red-100",
+                !langs[language] && "text-red-300"
+              )}
               value={langs[language] || ""}
               onChange={(e) =>
                 onTranslationChange({ word, translation: e.target.value })
